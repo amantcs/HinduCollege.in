@@ -1,0 +1,194 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<script src="jquery-2.1.3.min.js"></script>
+    <script src="mainnav.js"></script>
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="mainnav.js"></script>
+   
+          <script type ="text/javascript"  >
+              $(function () {
+                  $('a').bind('click', function (event) {
+                      var $anchor = $(this);
+                      $('html,body').stop().animate({
+                          scrollTop: $($anchor.attr('href')).offset().top
+                      }, 2000);
+                      event.preventDefault();
+                  });
+              });
+    </script>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+    <link href="NewFolder1/academic-education/layout/styles/layout.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper row0" style="display:inline; float:right; margin-right:180px;">
+  <div id="topbar" class="clear"> 
+    <!-- ################################################################################################ -->
+     
+    <nav>
+      <ul>
+        <li><a href="home.aspx">Home</a></li>
+        <li><a id="contact" href="#footer">Contact Us</a></li>
+         <li><a href="logout.aspx" > Logout</a> </li>
+         
+      </ul>
+    </nav>
+          
+    <!-- ################################################################################################ --> 
+  </div>
+</div>
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ -->
+<div class="wrapper row1" style="">
+  <header id="header" class="clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left" style="margin-top:-40px; height:88px;">
+      
+        <img src="images1/1.png"style=" height :111%; vertical-align:text-bottom; width:24%; float:left; "/>
+        <!--  <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>-->&nbsp;&nbsp;
+     <h1 style="width:500px;"><a href="home.aspx" style="">Hindu College</a><br /><br /><span  style="font-size:large">(NAAC Accredited)</span></h1>
+       &nbsp;&nbsp;&nbsp;&nbsp; 
+    </div> 
+    <div class="fl_right">
+      <form class="clear" method="post" action="#">
+        <fieldset>
+          <legend>Search:</legend> 
+          <input type="text" value="" placeholder="Search Here"/>
+          <button class="fa fa-search" type="submit" title="Search"><em>Search</em></button>
+        </fieldset>
+      </form>
+    </div>
+    <!-- ################################################################################################ --> 
+  </header>
+</div>
+    <div class="wrapper row2">
+  <div class="rounded">
+    <nav id="mainav" class="clear"> 
+      <!-- ################################################################################################ -->
+      <ul class="ulMenu">
+        <li class="active"><a href="home.aspx">Home</a></li>
+        <li><a href="#">Add</a>
+          <ul>
+           <li><a href="add_teacher.aspx" >Teacher</a></li>
+            <li><a href="add_student.aspx" >Student</a></li>
+              <li><a href="add_marks.aspx" >Marks</a></li>
+              <li><a href="add_fee.aspx" >Fee</a></li>
+              <li><a href="add_post.aspx">Vacancy</a></li>
+           
+          </ul>
+        </li>
+        <li><a href="#">Edit/Update</a>
+          <ul>
+            <li><a href="edit_teacher.aspx" >Edit Teacher</a></li>
+            <li><a href="edit_student.aspx" >Edit Student</a></li>
+              <li><a href="#">Edit Result</a></li>
+           
+             
+          </ul>
+        </li>
+        <li>
+            <a href="#">Delete</a>
+          <ul>
+               <li><a href="del_teacher.aspx"  >Teacher</a></li>
+               <li><a href="del_student.aspx" >Student</a></li>
+               
+               
+          </ul> 
+        </li> 
+        <li>
+            <a href="#">Report</a>
+            <ul >
+                 <li><a href="teach_grid.aspx" >Teacher</a></li> 
+                <li><a href="stu_grid.aspx" >Student</a></li>
+                <li><a href="admin_check_newad.aspx" >Check New Admission</a></li>
+                <li><a href="check_post.aspx">Check Vacancies Applications</a></li>
+                
+                 
+
+            </ul>
+        </li>
+             </ul>
+      <!-- ################################################################################################ --> 
+    </nav>
+  </div>
+</div>
+
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+         
+            <p>
+                &nbsp;<p>
+                &nbsp;<p>
+                &nbsp;<p>
+                <br />
+           
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <div class="wrapper row4">
+  <div class="rounded">
+    <footer id="footer" class="clear"> 
+      <!-- ################################################################################################ -->
+      <div class="one_third first">
+        <figure class="center"><img class="btmspace-15" src="images/demo/worldmap.png" alt="">
+          <figcaption><a href="#">Find Us With Google Maps &raquo;</a></figcaption>
+        </figure>
+      </div>
+      <div class="one_third">
+        <address>
+        Long Educational Facility Name<br>
+        Address Line 2<br>
+        Town/City<br>
+        Postcode/Zip<br>
+        <br>
+        <i class="fa fa-phone pright-10"></i> xxxx xxxx xxxxxx<br>
+        <i class="fa fa-envelope-o pright-10"></i> <a href="#">contact@domain.com</a>
+        </address>
+      </div>
+      <div class="one_third">
+        <p class="nospace btmspace-10">Stay Up to Date With What's Happening</p>
+        <ul class="faico clear">
+          <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="faicon-flickr" href="#"><i class="fa fa-flickr"></i></a></li>
+          <li><a class="faicon-rss" href="#"><i class="fa fa-rss"></i></a></li>
+        </ul>
+        <form class="clear" method="post" action="#">
+          <fieldset>
+            <legend>Subscribe To Our Newsletter:</legend>
+            <input type="text" value="" placeholder="Enter Email Here&hellip;">
+            <button class="fa fa-sign-in" type="submit" title="Sign Up"><em>Sign Up</em></button>
+          </fieldset>
+        </form>
+      </div>
+      <!-- ################################################################################################ --> 
+    </footer>
+  </div>
+</div>
+    <div class="wrapper row5">
+  <div id="copyright" class="clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ --> 
+  </div>
+</div>
+    <!-- JAVASCRIPTS --> 
+<script src="NewFolder1/academic-education/layout/scripts/jquery.min.js"></script>
+<script src="NewFolder1/academic-education/layout/scripts/jquery.fitvids.min.js"></script> 
+<script src="NewFolder1/academic-education/layout/scripts/jquery.mobilemenu.js"></script> 
+<script src="NewFolder1/academic-education/layout/scripts/tabslet/jquery.tabslet.min.js"></script>
+
+
+</body>
+</html>
